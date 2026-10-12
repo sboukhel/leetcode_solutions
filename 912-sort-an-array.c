@@ -1,49 +1,38 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
-int* sortArray(int* nums, int numsSize, int* returnSize) {
+#include <stdlib.h>
+
+void swap(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void sorting(int *tab, int start, int end)
+{
+    if (start >= end)
+        return;
+
+    int r = start + rand() % (end - start + 1);
+    swap(&tab[start], &tab[r]);
+    int pivot = tab[start];
+
+    int lt = start, i = start + 1, gt = end;
+    while (i <= gt)
+    {
+        if (tab[i] < pivot)
+            swap(&tab[lt++], &tab[i++]);
+        else if (tab[i] > pivot)
+            swap(&tab[i], &tab[gt--]);
+        else
+            i++;
+    }
+    sorting(tab, start, lt - 1);
+    sorting(tab, gt + 1, end);
+}
+
+int *sortArray(int *nums, int numsSize, int *returnSize)
+{
+    sorting(nums, 0, numsSize - 1);
     *returnSize = numsSize;
-    if (numsSize <= 1) return nums;
-    for (int i = 1; i < numsSize; i++) {
-        int child = i;
-        while (child > 0) {
-            int parent = (child - 1) / 2;
-            if (nums[child] > nums[parent]) {
-                int tmp = nums[child];
-                nums[child] = nums[parent];
-                nums[parent] = tmp;
-                child = parent;
-            } else {
-                break;
-            }
-        }
-    }
-    for (int i = numsSize - 1; i > 0; i--) {
-        int tmp = nums[0];
-        nums[0] = nums[i];
-        nums[i] = tmp;
-        int parent = 0;
-        while (1) {
-            int leftChild = 2 * parent + 1;
-            int rightChild = 2 * parent + 2;
-            int largest = parent;
-
-            if (leftChild < i && nums[leftChild] > nums[largest]) {
-                largest = leftChild;
-            }
-            if (rightChild < i && nums[rightChild] > nums[largest]) {
-                largest = rightChild;
-            }
-            if (largest != parent) {
-                int swapTmp = nums[parent];
-                nums[parent] = nums[largest];
-                nums[largest] = swapTmp;
-                parent = largest;
-            } else {
-                break;
-            }
-        }
-    }
-
     return nums;
 }
