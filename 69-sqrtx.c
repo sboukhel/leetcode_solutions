@@ -1,11 +1,11 @@
 int mySqrt(int x) {
   
-    int i = 0;
+    int k = 0;
 
-    while ((long long)i * i <= x) {
-        i++;
+    while ((long long)k * k <= x) {
+        k++;
     }
 
-    return i - 1;
+    return k - 1;
 }
   
