@@ -1,54 +1,86 @@
-# LeetCode Solutions: The Grind Never Ends
+# LeetCode Solutions
 
-> "I came for the easy problems. I stayed because the binary search questions started looking like a psychological test."
+A curated collection of LeetCode problem solutions implemented in C, with explanations of the approach, correctness, and time/space complexity. This repository is intended as both a learning record and a reference for algorithmic problem solving.
 
-Welcome to my LeetCode chaos chamber. This repo is a collection of my solutions, notes, and little moments of despair when the edge case says, "Surprise!"
+[![GitHub repo](https://img.shields.io/badge/GitHub-sboukhel%2Fleetcode_solutions-181717?logo=github)](https://github.com/sboukhel/leetcode_solutions)
+[![Language](https://img.shields.io/badge/Language-C-00599C?logo=c)](https://github.com/sboukhel/leetcode_solutions)
 
-## What is this repo?
+## Overview
 
-This is where I dump my attempts at algorithmic problems, mostly with explanations of the approach and the time/space complexity. Some solutions are clean. Some are patched together with the energy of a tired developer trying to survive the day. All of them are learning experiences.
+This repository contains solutions to a variety of LeetCode problems, with a focus on:
 
-## The vibe
+- algorithm design and optimization
+- data structures and problem modeling
+- interview preparation and coding practice
+- clear, readable implementations in C
 
-- 🧠 Thinking: "This is easy."
-- 😵 Reality: "Why is this failing on test case 42?"
-- ✅ After fix: "It works... for now."
-- 🚀 Final mood: "Okay, one more problem."
+Each solution is structured to help both understanding and review, making the repository useful for study, revision, and portfolio-building.
 
-## Why keep solving?
+## Repository Goals
 
-Because every accepted solution is a tiny win. Every wrong answer is a lesson. Every runtime error is a story for the group chat.
+- Practice problem-solving consistently
+- Improve understanding of common algorithms and patterns
+- Build a reusable set of solutions for technical interview preparation
+- Document reasoning and complexity analysis in a clear format
 
-## Typical format
+## Typical Solution Format
 
-Each solution usually includes:
+Each problem entry generally includes:
 
-- problem explanation
-- approach / intuition
-- code
+- problem context or summary
+- approach and intuition
+- C implementation
 - time complexity
 - space complexity
-- a note saying, "I swear this was working yesterday"
+- notes on edge cases or optimization opportunities
 
-## Motto
+## Topics Covered
 
-"If the code doesn't work, debug it. If it still doesn't work, add another if statement and pray."
+The repository includes solutions across a range of topics such as:
 
-## Extra chaos
+- Arrays
+- Strings
+- Hashing
+- Binary Search
+- Two Pointers
+- Stacks and Queues
+- Trees
+- Graphs
+- Dynamic Programming
+- Sorting and Searching
 
-This repo is for:
+## Getting Started
 
-- practicing problem-solving
-- sharpening logic
-- surviving interview prep
-- collecting proof that I did not give up
+Clone the repository:
 
-## Final message
+```bash
+git clone https://github.com/sboukhel/leetcode_solutions.git
+cd leetcode_solutions
+```
 
-If you are here to learn, welcome. If you are here to judge my code, also welcome — but at least admire the effort.
+Compile a solution with GCC:
 
-Let the algorithmic suffering begin. 
+```bash
+gcc solution.c -o solution
+./solution
+```
+
+## Usage
+
+Use this repository as:
+
+- a reference for idiomatic C solutions
+- a place to review algorithmic patterns
+- a record of continuous learning and coding improvement
+
+## Why This Repository Exists
+
+Problem solving is a skill that improves through repetition, reflection, and disciplined practice. This repository reflects that process: each solution is a step toward stronger reasoning, better code quality, and deeper technical understanding.
+
+## Contact
+
+For questions, suggestions, or collaboration ideas, feel free to open an issue or reach out through the GitHub repository.
 
 ---
 
-Made with caffeine, confusion, and a suspicious amount of optimism.
+Built with a focus on clarity, correctness, and continuous improvement.
