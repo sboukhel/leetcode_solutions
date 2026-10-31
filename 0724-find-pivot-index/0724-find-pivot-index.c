@@ -1,6 +1,6 @@
 int pivotIndex(int* nums, int numsSize) {
     int totalsum = 0;
-    short i = 0;
+    int i = 0;
     while (i < numsSize){
         totalsum += nums[i];
         i++;
