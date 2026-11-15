@@ -1,3 +1,4 @@
+#include <string.h>
 
 int lengthOfLongestSubstring(char* s) {
     int  k[256];
